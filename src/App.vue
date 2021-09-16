@@ -13,12 +13,21 @@ export default {
   components: {
     Car
   },
+  methods: {
+    changeName() {
+      debugger
+      return this.carName = 'df'
+    }
+  },
   data () {
     return {
       title: 'Welcome',
       carName: 'Audi',
       carYear: 2000
     }
+  },
+  beforeMount() {
+    this.$on('nameChanged', this.changeName())
   }
 }
 </script>
