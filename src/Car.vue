@@ -8,10 +8,10 @@
 <script>
 export default {
   name: 'Car',
-  props: [
-    'carName',
-    'carYear'
-  ],
+  props: {
+    carName: String,
+    carYear: Number
+  },
   data() {
     return {
     }
